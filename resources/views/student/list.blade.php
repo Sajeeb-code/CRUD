@@ -12,6 +12,8 @@
       <th scope="col">Address</th>
       <th scope="col">Comments</th>
       <th scope="col">Created At</th>
+      <th scope="col">Updated At</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -24,6 +26,11 @@
             <td>{{ $value->student_address }}</td>
             <td>{{ $value->comments }}</td>
             <td>{{ $value->created_at->diffForhumans() }}</td>
+            <td>{{ $value->updated_at->diffForhumans() }}</td>
+            <td>
+            <a href= {{ "edit/". $value->id }} class="btn btn-success">Edit</a>
+                <a href={{"delete/" . $value->id }} class="btn btn-danger">Delete</a>
+            </td>
         </tr>
       
           

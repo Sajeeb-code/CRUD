@@ -21,6 +21,12 @@ Route::post('/student_insert', [StudentController::class,"insert"])->name('inser
 
 Route::get('list',[StudentController::class,'list'])->name('list');
 
+Route::get('delete/{id}',[StudentController::class,'delete'])->name('delete');
+
+Route::get('edit/{id}',[StudentController::class,'edit'])->name('edit');
+
+Route::post('student_update/',[StudentController::class,'update'])->name('update');
+
 Route::get('/', function () {
     return view('welcome');
 });
